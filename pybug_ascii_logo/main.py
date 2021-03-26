@@ -30,9 +30,13 @@ def gen_circle_points(
 
 
 points = gen_circle_points(50, terminal_resize=8 / 16)
-print(points)
 for i in points:
     canvas.add_item(item.Item("@", i))
 
-print(canvas.render())
-input()
+data = list()
+for i in canvas.render().split("\n"):
+    data.append([*i])
+print(data)
+
+# print(canvas.render())
+# input()
